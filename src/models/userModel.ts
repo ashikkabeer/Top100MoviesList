@@ -1,34 +1,32 @@
-import {Model, Table, Column, DataType} from "sequelize-typescript"
-import {Gender} from './gender'
+import { Model, Table, Column, DataType } from 'sequelize-typescript';
+import { Gender } from './gender';
 @Table({
-    tableName: "Users"
+    tableName: 'Users',
 })
-
 export default class User extends Model {
     @Column({
         type: DataType.INTEGER,
-        primaryKey:true,
+        primaryKey: true,
         autoIncrement: true,
-        field:"id"
+        field: 'id',
     })
-    id?:number;
+    id?: number;
 
     @Column({
-        type:DataType.STRING(50),
-        field:"name"
+        type: DataType.STRING(50),
+        field: 'name',
     })
-    title?:string
+    name?: string;
 
     @Column({
-        type:DataType.STRING(50),
-        field: "bio"
+        type: DataType.STRING(50),
+        field: 'bio',
     })
-    title?: string;
+    bio?: string;
 
     @Column({
-        type:DataType.ENUM,
-        field: "gender"
+        type: DataType.ENUM(...Object.values(Gender)),
+        field: 'gender',
     })
-    gender: Gender
-    
+    gender: Gender | undefined;
 }

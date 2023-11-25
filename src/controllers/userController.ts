@@ -1,16 +1,53 @@
-
 import { Request, Response } from 'express';
+import User from '../models/userModel';
+import userRepository from '../repositories/user.repository';
 
 // Signup controller
-export const signup = (req: Request, res: Response) => {
-  // Implement your signup logic here
-  // ...
-  res.send('Signup successful');
-};
+export default class UserController {
+  /*Create in the postgres*/
+    async create(req: Request, res: Response) {
+        try {
+            res.status(201).json({ message: 'create ok' });
+            reqBody: req.body;
+        } catch (error) {
+            res.status(500).json({
+                message: 'Internal Server Error!',
+            });
+        }
+    }
 
-// Login controller
-export const login = (req: Request, res: Response) => {
-  // Implement your login logic here
-  // ...
-  res.send('Login successful');
-};
+    async findAll(req: Request, res: Response) {
+        try {
+            res.status(201).json({ message: 'create ok' });
+            reqBody: req.body;
+        } catch (error) {
+            res.status(500).json({
+                message: 'Internal Server Error!',
+            });
+}
+    }
+    async findOne(req: Request, res: Response) {
+        try {
+            res.status(200).json({
+                message: 'findOne OK',
+                reqParamId: req.params.id,
+            });
+        } catch (err) {
+            res.status(500).json({
+                message: 'Internal Server Error!',
+            });
+        }
+    }
+
+    async update(req: Request, res: Response) {
+
+    }
+
+    async delete(req: Request, res: Response) {
+
+    }
+
+    async deleteAll(req: Request, res: Response) {
+
+    }
+}
