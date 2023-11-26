@@ -1,5 +1,6 @@
 import { Model, Table, Column, DataType } from 'sequelize-typescript';
-import { Gender } from './gender';
+
+
 @Table({
     tableName: 'Users',
 })
@@ -25,8 +26,8 @@ export default class User extends Model {
     bio?: string;
 
     @Column({
-        type: DataType.ENUM(...Object.values(Gender)),
+        type: DataType.ENUM('male', 'female', 'other'),
         field: 'gender',
     })
-    gender: Gender | undefined;
+    gender!: 'male' | 'female' | 'other';
 }
