@@ -6,7 +6,7 @@ Top100Movies is a TypeScript Node.js Express application that allows users to si
 
 The project follows a modular structure for better organization and maintainability:
 
-- **`src`**: This folder contains the source code of the movie app.
+- <font color="green">src</font>: This folder contains the source code of the movie app.
 
   - **`index.ts`**: The entry point of the application.
 
