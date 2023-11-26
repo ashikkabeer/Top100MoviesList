@@ -2,7 +2,7 @@
 
 Top100Movies is a TypeScript Node.js Express application that allows users to sign up, add their favorite movies, write comments, rank them, and showcase their movie lists to their friends. The app utilizes PostgreSQL as its database, JSON Web Tokens (JWT) for authentication, and Sequelize as the ORM for interacting with the database.
 
-## Project Structure
+## Project Structure :lollipop:
 
 The project follows a modular structure for better organization and maintainability:
 
