@@ -30,9 +30,9 @@ class Movie extends Model {
 
     @Column({
         type: DataType.TEXT,
-        field: 'description',
+        field: 'overview',
     })
-    description?: string;
+    overview?: string;
 
     @Column({
         type: DataType.STRING(255),
